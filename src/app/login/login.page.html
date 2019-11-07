@@ -1,0 +1,77 @@
+<ion-header>
+
+</ion-header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<ion-content >
+    <div class="form">
+  <div class="layout" >
+      
+    
+    <h2><ion-title class="title">{{title}}</ion-title></h2>
+  
+  <br><br>
+    <ion-list class="list">
+      <ion-item>
+    <ion-input type ="sting" placeholder="username" [(ngModel)]="username" class="text" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="password" [(ngModel)]="password" class="text" required></ion-input>
+  </ion-item>
+  </ion-list>
+  <br>
+  <ion-text class="href" (click)="popup()">Forgot Password ?. </ion-text>
+ 
+  &nbsp;
+ 
+  &nbsp;
+  <a class="href" href="/signup"> Signup</a><br>
+  <br>
+<br><br>
+
+<div class="footer">
+    <ion-button class="btn" color="dark" (click)="login()" >Login</ion-button><br>
+    <p>OR</p>
+    
+  
+  <ion-icon name="logo-facebook" size="large" background="none" (click)="loginWithFB()" ></ion-icon> &nbsp;
+  
+  
+  &nbsp; <ion-icon ios="logo-google" md="logo-google" size="large" (click)="google()" ></ion-icon>
+
+
+</div>
+
+<div class="forgot" *ngIf="pop">
+  <ion-text>Enter your email below and we'll send your instructions to recover your password</ion-text>
+  <br>
+  <br>
+  <ion-input type="email" placeholder="enter your email" [(ngModel)]="email" style="border:1px solid rgb(248, 241, 241);"></ion-input>
+  <br>
+  <ion-text class="error" text-center>{{error}}</ion-text>
+<br>
+<br>
+  <ion-button size="small" (click)="recover()">submit</ion-button> &nbsp;
+  <ion-button size="small" (click)="popupcl()">cancel</ion-button>
+</div>
+
+  </div>
+
+
+
+
+ 
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+    <img [src]="userData.picture" />
+    <ion-card-content>
+      <p>Email: {{ userData.email }}</p>
+      <p>First Name: {{ userData.first_name }}</p>
+    </ion-card-content>
+  </ion-card>
+ 
+
+
+</div>
+
+</ion-content>

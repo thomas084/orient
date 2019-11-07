@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Let's Customize Your Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="main">
+
+  <div class="roll" *ngIf="roll">
+
+      <br>
+      <ion-text >
+        &nbsp;<h1>
+          Whata are the roles  you play ?
+          </h1>
+        </ion-text>
+      <ion-list>
+        <ion-radio-group [(ngModel)]="radioval">
+          <ion-list-header>
+            <h2>ROll</h2>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Student</ion-label>
+            <ion-radio slot="end" value="Student" checked></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Professor/Teacher</ion-label>
+            <ion-radio slot="end" value="Professor/Teacher"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Mentor</ion-label>
+            <ion-radio slot="end" value="Mentor"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Working professional</ion-label>
+              <ion-radio slot="end" value="Working professional"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Entrepuner</ion-label>
+                <ion-radio slot="end" value="Entrepuner"></ion-radio>
+              </ion-item>
+        </ion-radio-group >
+      </ion-list>
+      
+      <ion-button (click)="radio()" class="next" color="medium">next </ion-button>
+      <ion-button (click)="workplace()" class="skip" color="medium">Skip</ion-button>
+
+  </div>
+
+
+  <div class="work" *ngIf="work">
+    &nbsp;<h1>Your workplace</h1>
+<ion-list>
+      <ion-item>
+        <ion-label>School/College :</ion-label>
+        <ion-select placeholder="Select One">
+            <ion-select-option value="school">School</ion-select-option>
+            <ion-select-option value="college">Collgee</ion-select-option>
+          </ion-select>
+        </ion-item>
+      <ion-item>
+      <ion-label>Course of study</ion-label>
+      <ion-select placeholder="Select One">
+          
+        </ion-select>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label>Year of (expected) passout :</ion-label>
+        <ion-datetime  placeholder="passout year" displayFormat="YYYY" min="1981" max="2020"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>City</ion-label>
+          <ion-select placeholder="Select One">
+              <ion-select-option value="school">Bangalore</ion-select-option>
+              <ion-select-option value="college">Tamil Nadu</ion-select-option>
+            </ion-select>
+        </ion-item>
+  </ion-list>
+
+     <ion-button  class="next" color="medium">next </ion-button>
+      <ion-button (click)="mobilepage()" class="skip" color="medium">Skip</ion-button>
+  </div>
+
+<div class="mobile" *ngIf="mobile">
+  &nbsp;<h2>Do you wish to be informed about things related to you on mobile</h2>
+
+     &nbsp; <ion-button (click)="popopen()" >yes</ion-button>
+      <ion-button>No </ion-button>
+      <div class="pop" *ngIf="pop">
+<ion-list>
+  <ion-item>
+    <ion-input type="date" placeholder="Enter your Mobile Number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-button>Generate OTP</ion-button>
+  </ion-item>
+  <ion-item>
+      <ion-input type="number" placeholder="Enter OTP"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-button>Verify OTP</ion-button>
+  </ion-item>
+</ion-list>
+
+      </div>
+      <ion-button  class="next" color="medium">next </ion-button>
+      <ion-button (click)="otheropen()" class="skip" color="medium">Skip</ion-button>
+</div>
+
+<div class="other" *ngIf="other">
+  &nbsp;<h2>Other optional details</h2><br>
+    <ion-list>
+        <ion-item>
+          <ion-label>Date Of Birth : </ion-label><br>
+          <ion-input type="date" placeholder="DOB"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="string" placeholder="Facebook profile link"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="string" placeholder="LinkedIn profile link"></ion-input>
+        </ion-item>
+     </ion-list>
+      <ion-button  class="next" color="medium">Complete Setup </ion-button>
+      <ion-button (click)="otheropen()" class="skip" color="medium">Skip</ion-button>
+</div>
+</div>
+</ion-content>

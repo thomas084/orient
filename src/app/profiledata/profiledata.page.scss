@@ -1,0 +1,51 @@
+.main{
+    width:100%;
+    height:100%;
+    
+    align-content: center;
+}
+.roll{
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgb(108, 109, 110),rgba(235, 232, 236, 0.685));
+    position: fixed; 
+    
+}
+
+.work{
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgb(108, 109, 110),rgba(235, 232, 236, 0.685));
+    position: fixed;
+}
+.mobile{
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgb(108, 109, 110),rgba(235, 232, 236, 0.685));
+    position: fixed;
+    align-content: center;
+}
+.other{
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgb(108, 109, 110),rgba(235, 232, 236, 0.685));
+    position: fixed;
+}
+ion-item {
+    --ion-background-color:none;
+}
+ion-list {
+    --ion-background-color:none;
+}
+.next{
+    bottom:30px;
+    left:5%;
+    position: fixed;
+}
+
+
+.skip{
+    bottom:30px;
+    right:5%;
+    position: fixed;
+}
